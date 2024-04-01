@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase4 - HTML - Formularios</title>
+</head>
+<body>
+  <section>
+  <h1>Formularios</h1>
+
+    <form method="get">
+        <div>
+          <label for="nombre">Nombre</label>
+          <input id="nombre"
+               name="nombre">
+          
+        </div>
+        <hr>
+        <div>
+            <label>Edad</label>
+            <input type="number" 
+            min="0"
+            max="120"
+            value="38">
+        </div>
+        <hr>
+        
+        <div>
+        <label for="fechaNac"></label>
+        <input id="fechaNac"
+           value="2000-01-01"
+           type="date"
+           name="fechaNac">
+        </div>
+        <hr>
+        <div>
+      
+          <spam>Turno</spam>
+          <div>
+            <input type="radio" 
+              name="turno"
+              value="mañana">mañana
+            <input type="radio" 
+              name="turno"
+              value="tarde"
+              checked>tarde
+            <input type="radio" 
+              name="turno"
+              value="noche">noche
+          </div>
+        </div>
+        <hr>
+        <div>
+        <label>Estudios:</label>
+        <spam> Primaria 
+            <input type="checkbox"
+            name="estudios"
+            value="pri"
+            checked></spam>
+        <spam> Secundaria 
+            <input type="checkbox"
+            name="estudios"
+            value="sec"></spam>
+        </div>
+        <div>
+          <label> Nacionalidad </label>
+          <select id="nacionalidad" 
+                  name="nacionalidad">
+                  <option value="1">Arg</option>
+                  <option value="2">Par</option>
+                  <option value="3" selected>Bra</option>
+                  <option value="4">Chi</option>  
+          </select>
+        </div>
+        <hr>
+        <div>
+          <label>Datos adicionales</label>
+          <div>
+          <textarea id="datosadicionales"
+             name="datosadicionales"
+             cols="50" 
+             rows="5"> </textarea>
+          </div>
+        </div>
+      <hr>
+
+        <div>
+          <label>CV</label>
+           <div>
+            <!-- investigar como validar la aceptacion de un formato determinado-->
+          <input type="file">
+          </div>
+        </div>
+      <hr>
+
+      <button> Enviar </button>
+
+      <button type="reset">Limpiar</button>
+
+    </form>
+    </section>
+
+    <section>
+      <h2>Login</h2>
+      <form>
+        <label>Usuario *</label>
+        <input type="text" required>
+        <label>Password</label>
+        <input type="password">
+        <button>
+          
+          Login
+
+        </button>
+      </form>
+
+    </section>
+
+    <section>
+      <h2>Reset password</h2>
+      <form>
+        <label>Email *</label>
+        <input type="email" required>
+
+        <button>
+          Reset
+        </button>
+      </form>
+
+    </section>
+
+    <section>
+      <form action="./resultado-busqueda.html">
+        <h3>Buscar</h3>
+        <input type="search" name="q">
+        <button>
+          Buscar
+        </button>
+      </form>
+    </section>
+</body>
+</html>
