@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!--esto es un comentario-->
 <p>Soy un parrafo</p> <!-- en el parrafo no se puede usar el link-->
@@ -9,16 +10,76 @@
   <title> Clase1 - HTML </title>
   <mietiqueta>blablabla</mietiqueta>
    <!-- aca se puede poner un icono-->
+   <!--incluir css en el html-->
+   <!-- 1: interna-->
+   <style>
+    /*codigo css */
+    .clasex {
+        
+    }
+    #tablas {
+        text-decoration: none;
+        color:brown;
+        /*16px = 1rem*/
+        /*2 * 16px = 2rem*/
+        font-size: 32px; /*rem | em unidades de medida relativa */
+
+
+    }
+
+    body{
+        background: lightblue;
+        text-align: center;
+
+
+    }
+
+
+   </style>
+   <!-- 2: inline -->
+
+   <!-- 3: externa -->
+   <link rel="stylesheet" href="./styles/styles.css">
+
+   <style>
+    h3{
+    color:blueviolet !important;
+
+
+   }
+   #conejo{
+    color:rgb(4, 0, 255)
+
+
+   }
+
+   .conejo {
+    color:black
+
+
+   }
+
+
+   /*inline >id > class> tipo 
+   tipo < class< id< inline 
+   usando el !important  se le da mas relevancia
+   */
+
+  </style>
+
+
+
 </head>
 
 <!-- esto lo que ve el usuario en el body-->
 
 <body>
-    <header>
+    <header style="background-color: antiquewhite; margin: 25px; padding: 50px;">
         <!-- listas No ordenadas-->
         <u1>
             <li>
-                <a href="./html/tablas.html">Tablas </a>
+                <a id="tablas" 
+                   href="./html/tablas.html">Tablas </a>
 
 
             </li>
@@ -42,9 +103,18 @@
     </header>
     <!--  -->
 
-    <h1>Titulo principal  </h1>
-    <p>parrafo 1</p>
-    <a href="https:www.google.com.ar">Google </a>
+    <h1 class="parrafo">Titulo principal  </h1>
+    <h2 id="subtitulo">Sub titulo</h2>
+
+    <h3 id="conejo"
+        class="conejo"
+        style=""
+        > Soy el conejo!!!</h3>
+
+    <p class="parrafo">parrafo 1</p>
+    <a href="https:www.google.com.ar"
+    
+    class="parrafo">Google </a>
     
     <!-- el img puede o no tener cierre-->
     <!-- tengo una relativo o absoluto -->

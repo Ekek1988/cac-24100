@@ -1,0 +1,30 @@
+root{
+    font-size: 16px;
+}
+
+/*
+comentario valido en css
+*/
+
+/*Mobile first*/
+.main{
+    background-image: url(../imgs/Streaming-768x513.jpeg);
+    background-position: ;
+    background-repeat: ;
+    /**/
+}
+
+header{
+    font-size: 19px;
+
+
+
+}
+
+/* fuentes*/
+h3 {
+    color: green;
+    font-size: 1,17em ; /*16px * 1.17*/
+
+
+}
