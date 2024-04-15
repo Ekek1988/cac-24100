@@ -1,16 +1,125 @@
+/* es bloqueante*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
+/*importar las fuentes*/
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
 root{
     font-size: 16px;
+    /*defino la fuente general*/
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+
+    /* TPH: Ver 0.2px que falta!!*/
+
 }
+
+*{
+/* modelo de caja*/
+margin-top: 0;
+margin-right: 0;
+margin-left: 0;
+margin-bottom: 0;
+}
+header {
+    border: 5px solid  red;
+    padding: 35px;
+    width: 250px;
+    box-sizing: border-box;
+}
+
+.menu{
+  background-color: aqua;
+}
+
+.menu li{
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  width: 20vw;
+  text-align: center;
+  color: blue;
+}
+
+
+header li{
+  list-style: none;
+    
+}
+/*
+
+header li a{
+  text-decoration: none;
+
+}
+*/
 
 /*
 comentario valido en css
 */
+
+.ubuntu-light {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .ubuntu-medium {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .ubuntu-light-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .ubuntu-medium-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  
+
 
 /*Mobile first*/
 .main{
     background-image: url(../imgs/Streaming-768x513.jpeg);
     background-position: ;
     background-repeat: ;
+    height: 50vh; /*px|vh|vw|%*/
+    width: 90vw; /*relativo al viewport/*
     /**/
 }
 
