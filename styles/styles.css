@@ -1,139 +1,750 @@
-/* es bloqueante*/
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap')
-/*importar las fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+:root {
+    font-size: 16px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+    background-color: var(--fondo-negro);
 
-root{
+/* COLORES */
+    --tamanio: 25px;
+    --texto-blanco: #ffffff;
+    --color-primario: #9f3647;
+    --fondo-negro: #0a0a0a;
+    --gris: #808080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.icon-container {
+    display: inline-block;
+    padding: 20px;
+}
+
+.icon-container i {
+    font-size: 24px;
+    transition: transform 0.5s ease;
+}
+
+.icon-container:hover i {
+    animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.header {
+    background-color: var(--color-primario);
+    width: 100VW;
+    box-sizing: border-box;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.header_logo {
+    display: inline-block;
+    width: 40vw;
+    margin-left: 35px;
+}
+.header_logo h3 {
+    display: inline;
+    font-weight: 100;
+}
+.header_menu {
+    padding-left: 4vw;
+    display: flex;
+    width: 50vw;
+    justify-content: flex-end;
+}
+
+.header_menu a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+    display: inline-block;
+    font-size: .9em;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.header_menu a:hover {
+    background-color: var(--color-primario);
+    background-origin: inherit;
+    box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+}
+
+.fondoNegro {
+    background-color: var(--fondo-negro);
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.textoBlanco {
+    color: var(--texto-blanco);
+}
+/*Moooooooooooooooobile 1st*/
+.main {
+    background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../imgs/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh/*px|vh|vw|%*/;
+    width: 100vw;/*relativo al viewport*/
+    padding: 20px;
+    display: flex; /* se va a row */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.main h1 {
+    font-size: 3rem;/*3 * 16px*/
+    padding-top: 5vh;
+}
+
+.main h2 {
+    font-size: 2rem;
+    padding-top: 5vh;
+    font-weight: 300;
+}
+
+.main button{
+    width: 10vw;
+    min-width: 20vw;
+    /*TODO:max-width: 25vw; ver que pasa!*/
+    height: 10vh;
+    min-height: 50PX;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #9f3647;
+}
+
+header {
+    font-size: 19px;
+}
+
+h2 {
+    font-size: 2.1rem; /*16px * 1.17*/
+}
+
+/*estilos formulario de busqueda de peliculas*/
+.form-busqueda {
+    background-color: var(--fondo-negro);
+    color: var(--texto-blanco);
+    height: 50vh;
+    padding-top: 15vh;
+    text-align: center;
+}
+/*selectores avanzados*/
+.form-busqueda h2{
+    font-size: 2rem;
+}
+.form-busqueda form {
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+.form-busqueda form input {
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: none;
+    color: var(--gris);
+    outline: none;
+    width: 50vw;
+}
+.form-busqueda form button {
+    border-radius: 20px;
+    padding: 10px 10px;
+    min-width: 10vw;
+    border: 2px solid var(--texto-blanco);
+    background-color: var(--color-primario);
+    color: var(--texto-blanco);
+    margin-left: 1vw;
+}
+.form-busqueda hr {
+    width: 70vw;
+    margin: 0 auto;/*una forma de center*/
+    border: 1px solid var(--color-primario)
+}
+/*efecto cuando pasamos sobre el boton*/
+.form-busqueda form button:hover {
+    width: 10.5vw;
+}
+
+#goBack {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    color: var(--texto-blanco);
+}
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    transition-duration: 1.5s; /* Duración de la transición */
+  }
+
+@media screen and (min-width: 1200px){
+    .header{
+        flex-direction: row-reverse;
+        /* background-color: var(--gris); */
+    }
+}
+@media screen and (min-width: 1200px){
+    .header{
+        flex-direction: row;
+    }
+}
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+.flex{
+    background-color: var(--color-primario);
+    color: var(--gris);
+    display: flex;
+    min-height: 150px;
+    /* lo centra en el eje main */
+    justify-content: center;
+    /* lo centra en el eje cross */
+    align-items: flex-end;
+}
+
+
+/*TENDENCIASSS*/
+
+.peliculasTendencia {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.peliculas a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+}
+
+.pelicula {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.pelicula:hover {
+    box-shadow: 0 0 30px var(--color-primario);
+    transform: scale(0.9);
+
+}
+
+.imgTendencia {
+    width: 100%;
+}
+
+.tituloPelicula {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+
+}
+
+.pelicula:hover .tituloPelicula {
+    opacity: 1;
+
+}
+
+.pelicula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: blur(10px);
+    z-index: 1;
+    transition: filter 0.5s ease;
+}
+
+.pelicula:hover::before {
+    filter: blur(10px);
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* media query */
+:root {
     font-size: 16px;
     /*defino la fuente general*/
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
+    background-color: var(--fondo-negro);
 
-    /* TPH: Ver 0.2px que falta!!*/
 
+    /*definir variables!!!*/
+    --tamanio: 25px;
+    --texto-blanco: #ffffff;
+    --color-primario: #9f3647;
+    --fondo-negro: #0a0a0a;
+
+    /*gris*/
+    --gris: #808080;
 }
 
-*{
-/* modelo de caja*/
-margin-top: 0;
-margin-right: 0;
-margin-left: 0;
-margin-bottom: 0;
-}
-header {
-    border: 5px solid  red;
-    padding: 35px;
-    width: 250px;
-    box-sizing: border-box;
-}
-
-.menu{
-  background-color: aqua;
-}
-
-.menu li{
-  list-style: none;
-  text-decoration: none;
-  display: inline-block;
-  width: 20vw;
-  text-align: center;
-  color: blue;
-}
-
-
-header li{
-  list-style: none;
-    
-}
-/*
-
-header li a{
-  text-decoration: none;
-
-}
-*/
-
-/*
-comentario valido en css
-*/
-
-.ubuntu-light {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .ubuntu-regular {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .ubuntu-medium {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .ubuntu-bold {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .ubuntu-light-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .ubuntu-regular-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .ubuntu-medium-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .ubuntu-bold-italic {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  
-
-
-/*Mobile first*/
-.main{
-    background-image: url(../imgs/Streaming-768x513.jpeg);
-    background-position: ;
-    background-repeat: ;
-    height: 50vh; /*px|vh|vw|%*/
-    width: 90vw; /*relativo al viewport/*
+* {
+    /* modelo de caja */
+    margin: 0;
+    padding: 0;
     /**/
 }
+.icon-container {
+    display: inline-block;
+    padding: 20px;
+}
 
-header{
+.icon-container i {
+    font-size: 24px;
+    transition: transform 0.5s ease;
+}
+
+/* Animación */
+.icon-container:hover i {
+    animation: shake 0.5s ease-in-out infinite;
+}
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+.header {
+    background-color: var(--color-primario);
+    width: 100vw;
+    box-sizing: border-box;
+    height: 10vh;
+    display: flex;
+    align-items: center;
     font-size: 19px;
+}
+.header_logo {
+    display: inline-block;
+    width: 40vw;
+    margin-left: 35px;
+}
+.header_logo h3 {
+    display: inline;
+    font-weight: 100;
+}
+.header_menu {
+    padding-left: 4vw;
+    display: flex;
+    width: 50vw;
+    justify-content: flex-end;
+}
 
+.header_menu a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+    display: inline-block;
+    font-size: .9em;
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-right: 20px; /* incremento el espaciado entre los botones*/
+}
+
+.header_menu a:hover {
+    background-color: var(--color-primario);
+    background-origin: inherit;
+    box-shadow: 1px 1px 1px 1px var(--fondo-negro);
+}
+
+.fondoNegro {
+    background-color: var(--fondo-negro);
+}
+
+.ubuntu-regular {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ubuntu-regular-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.ubuntu-bold-italic {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.textoBlanco {
+    color: var(--texto-blanco);
+}
+/*Moooooooooooooooobile 1st*/
+.main {
+    background-image: linear-gradient(to right top, #4e4b4b8a, #0000008a), url(../imgs/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 75vh/*px|vh|vw|%*/;
+    width: 100vw;/*relativo al viewport*/
+    padding: 20px;
+    display: flex; /* se va a row */
+    flex-direction: column;
+    align-items: center;
+
+}
+.main h1 {
+    font-size: 3rem;/*3 * 16px*/
+    padding-top: 5vh;
+}
+
+.main h2 {
+    font-size: 2rem;
+    padding-top: 5vh;
+    font-weight: 300;
+}
+
+.main button{
+    width: 10vw;
+    min-width: 20vw;
+    /*TODO:max-width: 25vw; ver que pasa!*/
+    height: 10vh;
+    min-height: 50PX;
+    margin-top: 5vh;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: #9f3647;
+}
+
+.main button {
+    font-size: 24px; /* Ajusto el tamaño del boton registrarse */
+}
+
+.main button.textoBlanco {
+    font-size: 30px; /* Hago mas largo el tamaño del fondo de Registrarse" */
+}
+
+
+
+h2 {
+    font-size: 1.17em; /*16px * 1.17*/
+}
+
+/*estilos formulario de busqueda de peliculas*/
+.form-busqueda {
+    background-color: var(--fondo-negro);
+    color: var(--texto-blanco);
+    height: 10vh;
+    padding-top: 15vh;
+    text-align: center;
+    padding-bottom: 20vh;
+
+}
+/*selectores avanzados*/
+.form-busqueda h2{
+    font-size: 2rem;
+}
+
+.form-busqueda form input {
+    border-radius: 20px;
+    padding: 10px 10px;
+    border: none;
+    color: var(--gris);
+    outline: none;
+    width: 50vw;
+}
+.form-busqueda form button {
+    border-radius: 20px;
+    padding: 10px 10px;
+    min-width: 10vw;
+    border: 2px solid var(--texto-blanco);
+    background-color: var(--color-primario);
+    color: var(--texto-blanco);
+    margin-left: 1vw;
+}
+hr{
+    width: 70vw;
+    margin: 0 auto;
+    border: 1px solid var(--color-primario)
+} 
+/*efecto cuando pasamos sobre el boton*/
+.form-busqueda form button:hover {
+    width: 10.5vw;
+}
+
+#goBack {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 9999;
+    color: var(--texto-blanco);
+}
+html {
+    scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    transition-duration: 1.5s; 
+  }
+
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/*TENDENCIASSS*/
+
+.peliculasTendencia {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+
+.peliculas a {
+    text-decoration: none;
+    color: var(--texto-blanco);
+}
+
+.pelicula {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.pelicula:hover {
+    box-shadow: 0 0 30px var(--color-primario);
+    transform: scale(0.9);
+
+}
+
+.imgTendencia {
+    width: 100%;
+}
+
+.tituloPelicula {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.9s ease;
 
 
 }
 
-/* fuentes*/
-h3 {
-    color: green;
-    font-size: 1,17em ; /*16px * 1.17*/
-
+.pelicula:hover .tituloPelicula {
+    opacity: 1;
 
 }
+
+.pelicula::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    filter: blur(10px);
+    z-index: 1;
+    transition: filter 0.5s ease;
+}
+
+.pelicula:hover::before {
+    filter: blur(10px);
+}
+h2{
+    color: var(--texto-blanco);
+    font-size: 2.1em;
+    padding: 5vh;
+}
+.botones{
+    background-color: var(--fondo);
+    color: var(--primario);
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: 60%;
+    margin: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.boton{
+    width: 100px;
+    height: 60px;
+    color: var(--texto-blanco);
+    background-color: var(--color-primario);
+    font-size: 1.2rem;
+    border-color: var(--texto-blanco);
+    padding: 2;
+    border-radius: 10px;
+    
+    
+}
+
+/* DESTACADAS */
+.destacadas{
+    padding-top: 10px;
+    width: 100%;
+    background-color: var(--fondo);
+    padding-bottom: 5vh;
+
+}
+
+.destacadas h2{
+    color: var(--texto-blanco);
+    text-align: center;
+    padding-bottom: 5vh;
+    font-size: 2.1rem;
+    padding-top: 20vh;
+}
+
+.contenedorscroll{
+    display: flex;
+    justify-content: space-around;
+}
+
+.lista img{
+    border-radius: 200px;
+    padding: 15px
+}
+
+.lista{
+    display:flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    width: 75%;
+    height: 50vh;
+    padding: 3vw;
+    justify-content:space-evenly
+}
+
+.lista::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.lista::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.lista::-webkit-scrollbar-thumb {
+    background-color: var(--color-primario);
+}
+
+
+
+ /* footer */
+ .footer{
+    background-color: var(--color-primario);
+    padding-top: 20px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+.footer_items a{
+    color: var(--texto-blanco);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
