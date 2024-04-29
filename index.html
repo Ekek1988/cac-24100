@@ -1,124 +1,202 @@
-
 <!DOCTYPE html>
-<!--esto es un comentario-->
-<p>Soy un parrafo</p> <!-- en el parrafo no se puede usar el link-->
-<a href="www.google.com.ar" >soy un link</a>
 
 <!-- estructura basica-->
+
 <head>
-<!-- esto lo ve el browser, pero no el usuario-->
-  <title> Clase1 - HTML </title>
-  <mietiqueta>blablabla</mietiqueta>
-   <!-- aca se puede poner un icono-->
-   <!--incluir css en el html-->
-   <!-- 1: interna-->
-   <style>
-    /*codigo css */
-    .clasex {
-        
-    }
-    #tablas {
-        text-decoration: none;
-        color:brown;
-        /*16px = 1rem*/
-        /*2 * 16px = 2rem*/
-        font-size: 32px; /*rem | em unidades de medida relativa */
-
-
-    }
-
-    body{
-        background: lightblue;
-        text-align: center;
-
-
-    }
-
-
-   </style>
-   <!-- 2: inline -->
-
-   <!-- 3: externa -->
-   <link rel="stylesheet" href="./styles/styles.css">
-
-   <style>
-    h3{
-    color:blueviolet !important;
-
-
-   }
-   #conejo{
-    color:rgb(4, 0, 255)
-
-
-   }
-
-   .conejo {
-    color:black
-
-
-   }
-
-
-   /*inline >id > class> tipo 
-   tipo < class< id< inline 
-   usando el !important  se le da mas relevancia
-   */
-
-  </style>
-
-
-
+    <title>CAC - Movies</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" type="image/png" href="./icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
-<!-- esto lo que ve el usuario en el body-->
 
 <body>
-    <header style="background-color: antiquewhite; margin: 25px; padding: 50px;">
-        <!-- listas No ordenadas-->
-        <u1>
-            <li>
-                <a id="tablas" 
-                   href="./html/tablas.html">Tablas </a>
+    <header class="header">
+        <div class="header_logo">
+            <div class="icon-container">
+                <i class="fa-solid fa-film textoBlanco "></i>
+                <h3 class="textoBlanco">CAC - Movies</h3>
+            </div>
 
+        </div>
 
-            </li>
-            <li>
-                <!--tarea-->
-                <a href="./html/etiquetas.html">Etiquetas Basicas</a>
-            </li>
-            <li>
-                <!--tarea-->
-                <a href="./html/multimedia.html">Multimedia</a>
-            </li>
-            <li>
-                <!--tarea-->
-                <a href="./html/formularios.html">Formularios</a>
-            </li>
-
-
-        </u1>
-
-
+        <div class="header_menu">
+            <a href="#">Tendencias</a>
+            <a href="#">Registrarse</a>
+            <a href="#" class="fondoNegro" id="btnLogin">Iniciar Sesión</a>
+        </div>
     </header>
-    <!--  -->
+    <main>
+        <section class="main">
+            <h1 class="textoBlanco">Películas y series ilimitadas<br> en un solo lugar</h1>
+            <h2 class="textoBlanco">Disfruta donde quieras.<br> Cancela en cualquier momento</h2>
+            <a href="#">
+                <button class="textoBlanco">
+                    Registrate
+                </button>
+            </a>
+        </section>
+    </main>
+    <section class="form-busqueda">
+        <h2>¿Qué estas buscando para ver?</h2>
+        <form action="./html/resultado-busqueda.html" id="frm">
+            <input type="search" id="buscar" placeholder="Ingrese su búsqueda">
+            <button id="btnBusqueda">
+                Buscar
+            </button>
+        </form>
+    </section>
+<hr>
 
-    <h1 class="parrafo">Titulo principal  </h1>
-    <h2 id="subtitulo">Sub titulo</h2>
+    <!-- TENDENCIASS -->
+    <section id="Tendencias" class="peliculasTendencia">
+        <h2>Las tendencias de hoy</h2>
+        <br>
+        <div class="peliculas">
+            <a href="#">
+                <div class="pelicula">
+                    <img class="imgTendencia contenedor" src="./imgs/jeanne_du_barry.jpg" alt="Jeanne Du Barry" loading="lazy">
+                    <div class="tituloPelicula">
+                        <h4>Jeanne Du Barry</h4>
+                    </div>
+                </div>
+            </a>
 
-    <h3 id="conejo"
-        class="conejo"
-        style=""
-        > Soy el conejo!!!</h3>
+            <a href="#">
+                <div class="pelicula">
+                    <img class="imgTendencia" src="./imgs/02 Dune_part one.jpg" alt="Dune - Part 1" loading="lazy">
+                    <div class="tituloPelicula">
+                        <h4>Dune - Parte 1</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pelicula">
 
-    <p class="parrafo">parrafo 1</p>
-    <a href="https:www.google.com.ar"
-    
-    class="parrafo">Google </a>
-    
-    <!-- el img puede o no tener cierre-->
-    <!-- tengo una relativo o absoluto -->
-    
-    <img src="https://i.pinimg.com/564x/d6/f9/0e/d6f90ee02ddadc463514b996b2d82c38.jpg">
-    
+                    <img class="imgTendencia" src="./imgs/benedetta.jpg" alt="Benedetta" loading="lazy">
+
+                    <div class="tituloPelicula">
+                        <h4>Benedetta</h4>
+                    </div>
+
+                </div>
+            </a>
+            <a href="#">
+                <div class="pelicula">
+
+                    <img class="imgTendencia" src="./imgs/03 Kung fu Panda 4.jpg" alt="Kung Fu Panda 4" loading="lazy">
+
+                    <div class="tituloPelicula">
+                        <h4>Kung Fu Panda 4</h4>
+                    </div>
+                </div>
+
+            </a>
+            <a href="#">
+                <div class="pelicula">
+                    <img class="imgTendencia" src="./imgs/After the pandemic.jpg" alt="After the Pandemic" loading="lazy">
+                    <div class="tituloPelicula">
+                        <h4>After the Pandemic</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pelicula">
+                    <img class="imgTendencia" src="./imgs/01 Godzilla x Kong.jpg" alt="Godzilla x Kong" loading="lazy">
+                    <div class="tituloPelicula">
+                        <h4>Godzilla x Kong</h4>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="pelicula">
+                    <img class="imgTendencia" src="./imgs/Dune_part two.jpg" alt="Dune - Part 2" loading="lazy">
+                    <div class="tituloPelicula">
+                        <h4>Dune - Parte 2</h4>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="pelicula">
+
+                    <img class="imgTendencia" src="./imgs/residentevil_damnation.jpg" alt="Residente Evil Damnation" loading="lazy">
+
+                    <div class="tituloPelicula">
+                        <h4>Residen Evil Damnation</h4>
+                    </div>
+
+                </div>
+            </a>
+            <a href="#">
+                <div class="pelicula">
+
+                    <img class="imgTendencia" src="./imgs/godzilla_minus_one.jpg" alt="Godzilla Minuto Uno" loading="lazy">
+
+                    <div class="tituloPelicula">
+                        <h4>Godzilla Minuto Uno</h4>
+                    </div>
+                </div>
+
+            </a>
+            <a href="#">
+                <div class="pelicula">
+                    <img class="imgTendencia" src="./imgs/The_First_Omen_poster.jpg" alt="La ultima Profecia" loading="lazy">
+                    <div class="tituloPelicula">
+                        <h4>La ultima Profecia</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="botones">
+            <input type="button" value="Anterior" class="boton" >
+            <input type="button" value="Siguiente" class="boton" >
+        </div>
+        <br>
+        <hr>
+        <br>
+        
+    </section>
+    </section>
+    <!-- DESTACADASSS -->
+    <section class="destacadas">
+        <h2>Las películas más buscadas</h2>
+        <div class="contenedorscroll">
+            <div class="lista">
+                <img src="./imgs/The dark night.jpg" class="imgD"></i>
+                <img src="./imgs/Goodfellas.jpg"class="imgD"></i>
+                <img src="./imgs/The roommate.jpg"class="imgD"></i>
+                <img src="./imgs/The shawshaw redeption.jpg"class="imgD"></i>
+                <img src="./imgs/Ghostbuster.jpg"class="imgD"></i>
+                <img src="./imgs/Pulp Fiction.jpg"class="imgD"></i>
+                <img src="./imgs/Forrest Gump.jpg"class="imgD"></i>
+                <img src="./imgs/The lord of the rings.jpg"class="imgD"></i>
+                <img src="./imgs/Your name.jpg"class="imgD"></i>
+                <img src="./imgs/Teh godfather parte II.jpg"class="imgD"></i>
+            </div>
+        </div>
+    </section>
+    <!-- volver -->
+    <a href="#" id="inicio-btn">
+        <i class="fa-solid fa-circle-up" id="goBack"></i>
+    </a>
 </body>
+
+<!-- footer -->
+<footer class="footer">
+    <div class="footer_items">
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Ayuda</a>
+        <a href="#" class="fondoNegro">Administrador Peliculas</a>
+    </div>
+</footer>
+
+
+<script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
+
+
+</html>
