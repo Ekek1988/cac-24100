@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<!-- estructura basica-->
+
+<head>
+    <title>CAC - Movies</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" type="image/png" href="../icon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="header_logo">
+            <div class="icon-container">
+                <i class="fa-solid fa-film textoBlanco "></i>
+                <h3 class="textoBlanco">CAC - Movies</h3>
+            </div>
+
+        </div>
+
+        <div class="header_menu">
+            <a href="#Tendencias">Tendencias</a>
+            <a href="../pages/signup.html">Registrarse</a>
+            <a href="../pages/login.html" class="fondoNegro">Iniciar Sesión</a>
+            <a href="../pages/api.html" class="fondoNegro">Conexion Api</a>
+        </div>
+    </header>
+        <main class="fondoNegro">
+            <section>
+                <h1 class="gestionTexto">Gestión de Películas</h1>
+                <p class="textoCargar">En esta sección podrás cargar nuevas películas al portal.</p>
+                <form action="" method="post">
+                    <section class="elementosForm">
+                   <div>
+                        <p class="textoForm">Título</p>
+                       <input class="inputOne" type="text" name="titulo" id="titulo" required>
+                   </div>
+                   <div>
+                        <p class="textoForm">Fecha de Lanzamiento</p>
+                        <input class="inputTwo" type="date" name="fechaLanzamiento" id="fechaLanzamiento" required>
+                    </div>
+                    <div>
+                        <p class="textoForm">Genero</p>
+                        <input class="inputTwo" type="text" name="genero" id="genero" required>
+                    </div>
+                    <div>
+                        <p class="textoForm">Duración</p>
+                        <input class="inputTwo" type="number" name="duracion" id="duracion" required>
+                    </div>
+                    </section>
+                    <section class="elementosForm">
+                    <div>
+                        <p class="textoForm">Director</p>
+                        <input class="inputOne" type="text" name="director" id="director" required>
+                    </div>
+                    <div>
+                        <p class="textoForm">Reparto</p>
+                        <input class="inputThree" type="text" name="reparto" id="reparto" required>
+                    </div>
+                    </section>
+                    <section class="elementosForm">
+                    <div>
+                        <p class="textoForm">Sinopsis</p>
+                        <input class="inputFour" type="text" name="sinopsis" id="sinopsis" required>
+                    </div>
+                    </section>
+                    <section class="elementosForm">
+                   <div>
+                        <p class="textoForm">Imagen</p>
+                       <input class="textoImagen" type="file" name="imagen" id="imagen" accept="image/*" required>
+                   </div>
+                   </section>
+                   <section>
+                   <div>
+                       <input class="botonAgregar" type="submit" value="Agregar Película">
+                   </div>
+                   </section>
+                </form>
+                <div>
+                    <hr class="barraDivisora">
+                </div>
+                <h1 class="gestionTexto">Listado de Películas</h1>
+                <p class="textoCargar">Para ver todos los datos de las películas, elija una y toque modificar.</p>
+                <div class="modificacionesTable">
+                <table>
+                    <tbody>
+                    <tr class="modificacionTabla">
+                        <th>Título</th>
+                        <th>Género</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                    <tr class="modificacionS">
+                        <td>Harry Potter</td>
+                        <td>Fantasía</td>
+                        <td><img src="" alt="Harry Potter"></td>
+                        <td>
+                            <button>Modificar</button>
+                            <button>Eliminar</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+            </section>
+
+        </main> 
+        <footer>
+
+        </footer>
+        
+    </body>
+</html>
