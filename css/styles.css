@@ -627,3 +627,143 @@ ul{
     justify-content: center;
     align-items: center;
 }
+/*Administrador*/
+*{ 
+    margin: 0;
+    padding: 0;
+}
+/*Color de fondo de la página, eliminar y remplazar con css de proyecto */
+.colorAdmin{
+    background-color: black;
+    background-size: cover;
+}
+.textoDeco{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+.backHeader{
+    background-color: #9f3647;
+    height: 10vh;
+}
+/*Css que se debe mantener*/
+.gestionTexto{
+    color: #ffffff;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 13px;
+    font-size: 2rem;
+}
+.textoCargar{
+    color: #ffffff;
+    padding-left: 70px;
+    padding-bottom: 16px;
+}
+.textoForm{
+    color: #ffffff;
+    padding-bottom: 7px;
+    padding-top: 10px;
+}
+.elementosForm{
+    display: flex;
+    padding-left: 70px;
+    gap: 20px;
+}
+.inputOne{
+    width: 350px;
+    height: 28px;
+}
+.inputTwo{
+    width: 240px;
+    height: 28px;
+}
+.inputThree{
+    width: 768px;
+    height: 28px;
+}
+.inputFour{
+    width: 1142px;
+    height: 70px;
+}
+.textoImagen{
+    color: #ffffff;
+}
+.botonAgregar{
+    margin-left: 70px;
+    margin-top: 13px;
+    background-color: #9f3647;
+    color: #ffffff;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+.barraDivisora{
+    width: 1100px;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+table {
+    border-collapse: collapse;
+    width: 1140px;
+    margin-left: 70px;
+    background-color: rgb(31, 30, 30);
+}
+th{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+.modificacionTabla{
+    height: 42px;
+}
+.modificacionS{
+    height: 260px;
+}
+.footerEdicion{
+    background-color: #9f3647;
+    height: 30px;
+}
+.modificacionesTable{
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+@media screen and (max-width: 768px){
+    .gestionTexto{
+        font-size: 1rem;
+        padding-left: 40px;
+    }
+    .textoCargar{
+        padding-left: 40px;
+    }
+    .elementosForm{
+        padding-left: 40px;
+        flex-direction: column;
+    }
+    .inputThree{
+        width: 350px;
+    }
+    .inputFour{
+        width: 350px;
+    }
+    .botonAgregar{
+        margin-left: 40px;
+    }
+    .barraDivisora{
+        width: 350px;
+        margin-left: 40px;
+    }
+    table {
+        width: 350px;
+        margin-left: 40px;
+    }
+
+}
