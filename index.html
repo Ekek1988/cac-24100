@@ -1,16 +1,18 @@
 <!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAC - Movies</title>
 
-<!-- estructura basica-->
-
-<head>
-    <title>CAC - Movies</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" type="image/png" href="./icon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-</head>
+        <link rel="stylesheet" href="./styles/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+        <link rel="icon" type="image/png" href="./icon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet">
+    </head>
 
 
 <body>
@@ -27,14 +29,13 @@
             <a href="#Tendencias">Tendencias</a>
             <a href="./pages/signup.html">Registrarse</a>
             <a href="./pages/login.html" class="fondoNegro">Iniciar Sesión</a>
-            <a href="./pages/api.html" class="fondoNegro">Conexion Api</a>
         </div>
     </header>
     <main>
         <section class="main">
             <h1 class="textoBlanco">Películas y series ilimitadas<br> en un solo lugar</h1>
             <h2 class="textoBlanco">Disfruta donde quieras.<br> Cancela en cualquier momento</h2>
-            <a href="#">
+            <a href="pages/login.html">
                 <button class="textoBlanco">
                     Registrate Ahora
                 </button>
@@ -53,114 +54,16 @@
 <hr>
 
     <!-- TENDENCIASS -->
-    <section id="Tendencias" class="peliculasTendencia">
-        <h2>Las tendencias de hoy</h2>
-        <br>
-        <div class="peliculas">
-            <a href="#">
-                <div class="pelicula">
-                    <img class="imgTendencia contenedor" src="./imgs/jeanne_du_barry.jpg" alt="Jeanne Du Barry" loading="lazy">
-                    <div class="tituloPelicula">
-                        <h4>Jeanne Du Barry</h4>
-                    </div>
+    <hr>
+            <section id="tendencias" class="peliculasTendencia">
+                <h2 class="tituloSection">Las tendencias de hoy</h2>
+                <div class="peliculas" id="tendenciasContainer">   
                 </div>
-            </a>
+                <button id="botonAnterior" class="boton anterior">Anterior</button>
+                <button id="botonSiguiente" class="boton siguiente">Siguiente</button>
+            </section>
+    <hr> 
 
-            <a href="#">
-                <div class="pelicula">
-                    <img class="imgTendencia" src="./imgs/02 Dune_part one.jpg" alt="Dune - Part 1" loading="lazy">
-                    <div class="tituloPelicula">
-                        <h4>Dune - Parte 1</h4>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="pelicula">
-
-                    <img class="imgTendencia" src="./imgs/benedetta.jpg" alt="Benedetta" loading="lazy">
-
-                    <div class="tituloPelicula">
-                        <h4>Benedetta</h4>
-                    </div>
-
-                </div>
-            </a>
-            <a href="#">
-                <div class="pelicula">
-
-                    <img class="imgTendencia" src="./imgs/03 Kung fu Panda 4.jpg" alt="Kung Fu Panda 4" loading="lazy">
-
-                    <div class="tituloPelicula">
-                        <h4>Kung Fu Panda 4</h4>
-                    </div>
-                </div>
-
-            </a>
-            <a href="#">
-                <div class="pelicula">
-                    <img class="imgTendencia" src="./imgs/After the pandemic.jpg" alt="After the Pandemic" loading="lazy">
-                    <div class="tituloPelicula">
-                        <h4>After the Pandemic</h4>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="pelicula">
-                    <img class="imgTendencia" src="./imgs/01 Godzilla x Kong.jpg" alt="Godzilla x Kong" loading="lazy">
-                    <div class="tituloPelicula">
-                        <h4>Godzilla x Kong</h4>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#">
-                <div class="pelicula">
-                    <img class="imgTendencia" src="./imgs/Dune_part two.jpg" alt="Dune - Part 2" loading="lazy">
-                    <div class="tituloPelicula">
-                        <h4>Dune - Parte 2</h4>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="pelicula">
-
-                    <img class="imgTendencia" src="./imgs/residentevil_damnation.jpg" alt="Residente Evil Damnation" loading="lazy">
-
-                    <div class="tituloPelicula">
-                        <h4>Residen Evil Damnation</h4>
-                    </div>
-
-                </div>
-            </a>
-            <a href="#">
-                <div class="pelicula">
-
-                    <img class="imgTendencia" src="./imgs/godzilla_minus_one.jpg" alt="Godzilla Minuto Uno" loading="lazy">
-
-                    <div class="tituloPelicula">
-                        <h4>Godzilla Minuto Uno</h4>
-                    </div>
-                </div>
-
-            </a>
-            <a href="#">
-                <div class="pelicula">
-                    <img class="imgTendencia" src="./imgs/The_First_Omen_poster.jpg" alt="La ultima Profecia" loading="lazy">
-                    <div class="tituloPelicula">
-                        <h4>La ultima Profecia</h4>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="botones">
-            <input type="button" value="Anterior" class="boton" >
-            <input type="button" value="Siguiente" class="boton" >
-        </div>
-        <br>
-        <hr>
-        <br>
-        
-    </section>
     </section>
     <!-- DESTACADASSS -->
     <section class="destacadas">
@@ -184,18 +87,22 @@
     <a href="#" id="inicio-btn">
         <i class="fa-solid fa-circle-up" id="goBack"></i>
     </a>
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="footer_items">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Ayuda</a>
+            <a href="./pages/administrador.html" class="fondoNegro">Administrador Peliculas</a>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="./js/cargar_peliculas_tendencia.js"></script>
 </body>
-
-<!-- footer -->
-<footer class="footer">
-    <div class="footer_items">
-        <a href="#">Términos y condiciones</a>
-        <a href="#">Preguntas frecuentes</a>
-        <a href="#">Ayuda</a>
-        <a href="./pages/administrador.html" class="fondoNegro">Administrador Peliculas</a>
-    </div>
-</footer>
-
 
 <script src="https://kit.fontawesome.com/181725805d.js" crossorigin="anonymous"></script>
 

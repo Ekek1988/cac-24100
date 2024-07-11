@@ -250,78 +250,107 @@ html {
 
 /*TENDENCIASSS*/
 
-.peliculasTendencia {
-    width: 80%;
+.peliculasTendencia{
+    width:80%;
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 15px;
-}
+    .tituloSection{
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-top:50px;
+        margin-bottom: 40px;
+        color: var(--texto-blanco);
+    }
+    .peliculas{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap:60px;
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            .pelicula{
+                width:200px;
+                height: 300px;
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+            
+                .imgTendencia{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                
+                }
+            
+                .tituloPelicula{
+                    z-index: 2;
+                    position: absolute;
+                    text-align: center;
+                    top: 50%;
+                    left: 50%;
+                    max-width: 20rem;
+                    width: 100%;
+                    transform: translateY(-50%) translateX(-50%);
+                    h4 {
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        opacity: 0;
+                        margin-bottom: 0.5rem;
+                        letter-spacing: 0.1rem;
+                        transition: opacity 0.5s ease-in-out;
 
-.peliculas {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-}
-
-.peliculas a {
-    text-decoration: none;
-    color: var(--texto-blanco);
-}
-
-.pelicula {
-    width: 200px;
-    height: 300px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-}
-
-.pelicula:hover {
-    box-shadow: 0 0 30px var(--color-primario);
-    transform: scale(0.9);
-
-}
-
-.imgTendencia {
-    width: 100%;
-}
-
-.tituloPelicula {
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-
-
-}
-
-.pelicula:hover .tituloPelicula {
-    opacity: 1;
-
-}
-
-.pelicula::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    filter: blur(10px);
-    z-index: 1;
-    transition: filter 0.5s ease;
-}
-
-.pelicula:hover::before {
-    filter: blur(10px);
+                    }
+                }
+                &:hover{
+                box-shadow: 0 0 30px #d2c2c4cd;
+                transform: scale(0.9);
+                
+                }
+                &:hover .tituloPelicula{
+                    width: 100%;
+                    height: 100%;
+                    backdrop-filter: blur(20px);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &:hover h4 {
+                    width: 100%;
+                    padding: 0.5rem;
+                    opacity: 1;
+                }
+            
+            }
+        }
+    
+    }
+    .boton{
+        border: 1px solid rgb(0, 0, 0);
+        box-sizing: content-box;
+        margin-top:10px;
+        margin-left:10px;
+        background-color:var(--color-primario);
+        color: var(--texto-blanco);
+        padding: 1rem 1rem;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        margin-bottom:60px;
+        width: 100px;
+        height: 60px;
+         /* Agregar efecto de botón presionado */
+         transition: transform 0.3s, box-shadow 0.3s;
+         &:hover {
+             background-color: var(--color-primario);
+             transform: scale(0.95);
+             box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+         }
+    }
 }
 
 
@@ -571,7 +600,7 @@ html {
 }
 
 /*TENDENCIASSS*/
-
+/*
 .peliculasTendencia {
     width: 80%;
     margin: 0 auto;
@@ -674,7 +703,7 @@ h2{
     
     
 }
-
+*/
 /* DESTACADAS */
 .destacadas{
     padding-top: 10px;
@@ -911,7 +940,7 @@ h2{
         .formRegistro{
             .is-valid{
                 border-radius: 10px;
-                border-left: 10px solid green;
+                border-left: 10px solid rgb(128, 0, 0);
             }
         }
     }
@@ -933,7 +962,7 @@ h2{
         .formLogin{
             .is-valid{
                 border-radius: 10px;
-                border-left: 10px solid green;
+                border-left: 10px solid rgb(128, 0, 0);
             }
         }
     }
@@ -1023,5 +1052,146 @@ h2{
 }
 
 .paginacion button:hover {
-	background: #137c32;
+	background: #c83131;
+}
+
+/*Administrador*/
+*{ 
+    margin: 0;
+    padding: 0;
+}
+/*Color de fondo de la página, eliminar y remplazar con css de proyecto */
+.colorAdmin{
+    background-color: black;
+    background-size: cover;
+}
+.textoDeco{
+    text-decoration: none;
+    list-style: none;
+    color: rgb(255, 255, 255);
+    display: inline;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+.backHeader{
+    background-color: #9f3647;
+    height: 10vh;
+}
+/*Css que se debe mantener*/
+.gestionTexto{
+    color: #ffffff;
+    padding-top: 20px;
+    padding-left: 70px;
+    padding-bottom: 13px;
+    font-size: 2rem;
+}
+.textoCargar{
+    color: #ffffff;
+    padding-left: 70px;
+    padding-bottom: 16px;
+}
+.textoForm{
+    color: #ffffff;
+    padding-bottom: 7px;
+    padding-top: 10px;
+}
+.elementosForm{
+    display: flex;
+    padding-left: 70px;
+    gap: 20px;
+}
+.inputOne{
+    width: 350px;
+    height: 28px;
+}
+.inputTwo{
+    width: 240px;
+    height: 28px;
+}
+.inputThree{
+    width: 768px;
+    height: 28px;
+}
+.inputFour{
+    width: 1142px;
+    height: 70px;
+}
+.textoImagen{
+    color: #ffffff;
+}
+.botonAgregar{
+    margin-left: 70px;
+    margin-top: 13px;
+    background-color: #9f3647;
+    color: #ffffff;
+    width: 130px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+.barraDivisora{
+    width: 1100px;
+    margin-top: 30px;
+    margin-left: 90px;
+}
+table {
+    border-collapse: collapse;
+    width: 1140px;
+    margin-left: 70px;
+    background-color: rgb(31, 30, 30);
+}
+th{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+.modificacionTabla{
+    height: 42px;
+}
+.modificacionS{
+    height: 260px;
+}
+.footerEdicion{
+    background-color: #9f3647;
+    height: 30px;
+}
+.modificacionesTable{
+    padding-bottom: 40px;
+    color: #ffffff;
+}
+@media screen and (max-width: 768px){
+    .gestionTexto{
+        font-size: 1rem;
+        padding-left: 40px;
+    }
+    .textoCargar{
+        padding-left: 40px;
+    }
+    .elementosForm{
+        padding-left: 40px;
+        flex-direction: column;
+    }
+    .inputThree{
+        width: 350px;
+    }
+    .inputFour{
+        width: 350px;
+    }
+    .botonAgregar{
+        margin-left: 40px;
+    }
+    .barraDivisora{
+        width: 350px;
+        margin-left: 40px;
+    }
+    table {
+        width: 350px;
+        margin-left: 40px;
+    }
+
 }
